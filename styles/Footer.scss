@@ -22,3 +22,14 @@ footer{
         }
     }
 }
+
+@media (max-width: 600px) {
+    footer {
+        width: 100%;
+        flex-direction: column-reverse;
+        .social{
+            width: 100%;
+        }
+    }
+  }
+  

@@ -9,8 +9,7 @@ export default function Footer () {
                 src={logo}
                 alt="logo"
                 width='200px'    
-                height='100%' 
-
+                height='100%'
                 // blurDataURL="data:..." automatically provided
                 placeholder="blur" // Optional blur-up while loading
             />
@@ -38,7 +37,6 @@ export default function Footer () {
                 <li>
                     <a href="https://www.facebook.com/ulisses.malanski" title="Instagram">
                         <FontAwesomeIcon icon={faInstagram} />
-
                     </a>
                 </li>
                 

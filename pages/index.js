@@ -16,9 +16,7 @@ export default function Home() {
         </Head>
 
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to Poke-Store-Next.js!
-          </h1>
+          
 
           <div className={styles.pagination}>            
             <IconButton aria-label='Preview' icon={<ArrowLeftIcon />} />
