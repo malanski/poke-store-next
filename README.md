@@ -19,8 +19,8 @@ Activity 7 from Awari Web Development Course
 Build a Next.js Application.  
   
 ## Specification
-- Create aNext.js App.
-- Create Routes.
+- Create a Next.js App.`cretate-next-app` 
+- Create Routes. Next uses `pages/` folder to route it is a file-system based router built on the concept of pages.
 - Reproduce parts of your HTML on Next.js.
 - Create and use at least one component.
 - Include some component with `state`
