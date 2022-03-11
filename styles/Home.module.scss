@@ -4,7 +4,9 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  width: 100%;
+  padding-top: 10px;
+  margin: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -50,27 +52,17 @@
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.pagination {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
 .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  width: 80%;
 }
 
 .card {

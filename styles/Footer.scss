@@ -1,0 +1,24 @@
+footer{
+    height: 100%;
+    background: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    .social {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        li{
+            font-size: 30px;
+            color: white;
+            list-style: none;
+            margin: 0;
+            text-align: right;
+
+        }
+    }
+}
