@@ -1,0 +1,33 @@
+
+.pokemon {
+    padding: 20px;
+    width: 100%;
+    color: white;
+    min-height: 100vh;
+
+    h1{
+      text-align: center;
+      font-size: 30px;
+      font-family: 'Pokemon Solid', sans-serif;
+    }
+    .pokeImg{
+        width: 250px;
+    }
+    .ablilities{
+      width: 100%;
+      padding: 10px;
+      border-radius: 15px;
+      border: 2px solid white;
+      h2{
+        text-align: center;
+        margin-top: 20px;
+        text-transform: uppercase;
+      }
+      ul{
+        padding: 10px;
+        list-style: decimal;
+      }
+  
+    }
+    
+  }
