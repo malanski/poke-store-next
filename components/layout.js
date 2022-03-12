@@ -1,6 +1,7 @@
-import Header from './Header'
-import Footer from './Footer'
 import Head from 'next/head'
+import Header from './Header'
+import Aside from './Aside'
+import Footer from './Footer'
 
 
 export default function Layout({ children }) {
@@ -13,7 +14,13 @@ export default function Layout({ children }) {
         </Head>
 
         <Header />
-            <main>{children}</main>
+
+        <div className='site-center'>
+          <main>{children}</main>
+
+          <Aside />
+        </div>
+
         <Footer />
       </div>
     )

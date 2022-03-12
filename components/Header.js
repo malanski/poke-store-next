@@ -5,16 +5,19 @@ import pokebal from '../public/logo-pokebal.png'
 export default function Header () {
     return(
         <header>
-             <Image className='pokebal'
-                src={pokebal}
-                alt="Pokéball"
-                width='100px'    
-                height='100%' 
 
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
-            />
-            <p className='store-name'>Poke-Store</p>
+            <div className='logo-loja'>
+                <Image className='pokebal'
+                    src={pokebal}
+                    alt="Pokéball"
+                    width='100px'    
+                    height='100%' 
+
+                    // blurDataURL="data:..." automatically provided
+                    placeholder="blur" // Optional blur-up while loading
+                />
+                <p className='store-name'>Poke-Store</p>
+            </div>
 
             <ul className='nav-list'>
                 <li>

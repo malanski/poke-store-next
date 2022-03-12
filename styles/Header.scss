@@ -4,16 +4,33 @@ header{
     display: flex;
     align-items: center;
     width: 100%;
-    height: 100px;
-    .pokebal {
-        margin-left: 20px;
-    }
-    .store-name {
-        font-family: 'Pokemon Solid', sans-serif;
-        font-size: 30px;
-        width: 100%;
-        margin-left: 20px;
-        color: white;
+    height: auto;
+    .logo-loja{
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .pokebal {
+            margin-left: 20px;
+            animation: poke-spin 3s infinite linear;
+        }
+
+        @keyframes poke-spin {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .store-name {
+
+            font-family: 'Pokemon Solid', sans-serif;
+            font-size: 30px;
+            width: 210px;
+            margin-left: 20px;
+            color: white;
+        }
     }
     .nav-list {
         font-weight: bolder;
@@ -26,3 +43,14 @@ header{
         justify-content: space-evenly;
     }    
 }
+
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        flex-direction: column;
+        .social{
+            width: 100%;
+        }
+    }
+  }
+  
