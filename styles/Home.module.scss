@@ -36,6 +36,11 @@
     font-size: 25px;
     color: white;
   }
+  .pokeImg{
+    border: 2px solid black;
+    margin-left: 5%;
+  }
+  
   .price{
     color: red;
     font-size: 20px;
@@ -63,14 +68,11 @@
 
 
 @media (max-width: 428px) {
-  .container{
-    width: 100%;
-    .grid {
-      flex-direction: column;
-      .card{
-        width: 100%;
-        margin: 0 0 10px 0;
-      }
+  .grid {
+    flex-direction: column;
+    .card{
+      width: 100%;
+      margin: 0 0 10px 0;
     }
   }
 }

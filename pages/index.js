@@ -27,14 +27,13 @@ export default function Home() {
 
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -46,14 +45,13 @@ export default function Home() {
 
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -65,14 +63,13 @@ export default function Home() {
             
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -81,17 +78,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
-
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -100,16 +96,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -118,17 +114,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
-
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -137,16 +132,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -155,17 +150,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
-
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -174,16 +168,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -192,17 +186,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
-
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -211,16 +204,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -229,17 +222,16 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
-
+            
             <a href="https://nextjs.org/docs" className={styles.card}>
               <h2>Pikachu</h2>
-              <Image className={styles.pokeImg}
+              <Image 
                 src={Pikachu}
                 alt="Pokémon"
-                width='100%'    
-                height="100%" 
-
-                // blurDataURL="data:..." automatically provided
-                placeholder="blur" // Optional blur-up while loading
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
               />
               <p className={styles.price}>150.00R$</p>
               <p className={styles.priceDisc}>120.00R$</p>
@@ -248,6 +240,79 @@ export default function Home() {
                 <span>Buy</span>
               </Button>
             </a>
+            
+            <a href="https://nextjs.org/docs" className={styles.card}>
+              <h2>Pikachu</h2>
+              <Image 
+                src={Pikachu}
+                alt="Pokémon"
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
+              />
+              <p className={styles.price}>150.00R$</p>
+              <p className={styles.priceDisc}>120.00R$</p>
+              
+              <Button className={styles.buyBtn}>
+                <span>Buy</span>
+              </Button>
+            </a>
+            
+            <a href="https://nextjs.org/docs" className={styles.card}>
+              <h2>Pikachu</h2>
+              <Image 
+                src={Pikachu}
+                alt="Pokémon"
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
+              />
+              <p className={styles.price}>150.00R$</p>
+              <p className={styles.priceDisc}>120.00R$</p>
+              
+              <Button className={styles.buyBtn}>
+                <span>Buy</span>
+              </Button>
+            </a>
+            
+            <a href="https://nextjs.org/docs" className={styles.card}>
+              <h2>Pikachu</h2>
+              <Image 
+                src={Pikachu}
+                alt="Pokémon"
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
+              />
+              <p className={styles.price}>150.00R$</p>
+              <p className={styles.priceDisc}>120.00R$</p>
+              
+              <Button className={styles.buyBtn}>
+                <span>Buy</span>
+              </Button>
+            </a>
+            
+            <a href="https://nextjs.org/docs" className={styles.card}>
+              <h2>Pikachu</h2>
+              <Image 
+                src={Pikachu}
+                alt="Pokémon"
+                layout='intrinsic'
+                srcSet='2x'
+                blurDataURL="data:..." 
+                placeholder="blur" 
+              />
+              <p className={styles.price}>150.00R$</p>
+              <p className={styles.priceDisc}>120.00R$</p>
+              
+              <Button className={styles.buyBtn}>
+                <span>Buy</span>
+              </Button>
+            </a>
+            
           </div>
 
         </div>
