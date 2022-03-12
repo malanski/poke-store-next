@@ -27,23 +27,15 @@ export default function Pokemon() {
                     <h2>Type: Electric</h2>
 
                     <p>Height: 0.6m</p>
-                    <p>Weight: 6kg</p>
-
+                    <p>Weight: 6kg</p
+                    >
+                    <h3>Special Moves</h3>
                     <ul>
                         <li>
-                            This is a e-commerce application Created using Next. 
+                            Attack: Lighting Bolt. 
                         </li>
                         <li>
-                            It is a follow up Project from  Awari React Course.
-                        </li>
-                        <li>
-                            Uses JavaScript as the major programing language. 
-                        </li>
-                        <li>
-                            W3C Validation on HTML targeting SEO trough Web Vitals.
-                        </li>
-                        <li>
-                            CSS3 - SASS
+                            Attack: Static
                         </li>
                     </ul>
                 </div>

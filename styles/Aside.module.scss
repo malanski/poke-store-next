@@ -23,9 +23,31 @@
     transition: all ease-in-out 0.8s;
     border-color: yellow ;
 }
+
 @media screen and (max-width:'428px') {
     .asider{
       width: 100%;
     }
     
-  }
+}
+
+@media screen and (max-width:'412px') {
+    .asider{
+      width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width:'375px') {
+    .asider{
+      width: 100%;
+    }
+}
+
+
+@media screen and (max-width:'360px') {
+    .asider{
+      width: 100%;
+    }
+}
