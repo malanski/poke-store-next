@@ -21,13 +21,13 @@ export default function Aside () {
                 placeholder="blur" // Optional blur-up while loading
                 />
             </div>
+
             <section className={styles.news}>
                 <h4>Subscribe</h4>
                 <input type='text' placeholder='Your e-mail'></input>
                 <button title='Subscribe'>
                     <FontAwesomeIcon icon={faMailBulk} />
                 </button>
-            
             </section>
         </aside>
     )

@@ -1,16 +1,23 @@
 .asider{
+    width: 30%;
     margin: 10px 10px 10px 0;
     padding: 10px;
     border: 2px solid white;
     border-radius: 15px;
-    width: 30vw;
     text-align: center;
     transition: all ease-out 0.8s;
     .cardlogo{
         width: 100%;
 
     }
+    
 
+}
+.news{
+    width: 100%;
+    input{
+        width: 80%;
+    }
 }
 .asider:hover{
     transition: all ease-in-out 0.8s;
