@@ -1,6 +1,12 @@
 # Poke-Store-Next
-Activity 7 from Awari Web Development Course
-
+Activity 7 from Awari Web Development Course  
+  
+<div align="right">
+  
+### Deploy at Vercel: <a href="https://poke-store-next-git-vercel-malanski.vercel.app/">Poke-Store-Next</a>  
+  
+</div>  
+  
 ## Technologies in this Project
 - Next
 - React
