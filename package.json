@@ -1,5 +1,4 @@
 {
-  "homepage": "https://poke-store-next.vercel.app/",
   "name": "poke-store-next",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.6",
@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "eslint": "8.10.0",
-    "eslint-config-next": "12.1.0",
-    
+    "eslint-config-next": "12.1.0"    
   }
 }
