@@ -1,5 +1,6 @@
 html,
 body {
+
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -21,11 +22,14 @@ a {
 .site-center{
   display: flex;
   justify-content: space-between;
+  background-color: rgb(41, 41, 41);
 
 }
-.mainSite {
-  min-height: 100vh;
+main{
   width: 70vw;
+}
+.mainsite {
+  min-height: 100vh;
   padding-top: 10px;
   margin: 0;
   display: flex;
@@ -36,6 +40,9 @@ a {
 @media screen and (max-width:'428px') {
   .site-center{
     flex-direction: column;
+  }
+  main{
+    width: 100vw;
   }
   
 }

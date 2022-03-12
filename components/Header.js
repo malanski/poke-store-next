@@ -30,7 +30,11 @@ export default function Header () {
                         <a title='About this project'>About Us</a>
                     </Link>
                 </li>
-                <li>Pokémon</li>
+                <li>
+                    <Link href="/pokemon">
+                        <a title='About this project'>Pokémon</a>
+                    </Link>
+                </li>
             </ul>
         </header>
     )
