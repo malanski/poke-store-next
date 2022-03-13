@@ -49,9 +49,11 @@ export default function About() {
                             W3C Validation on HTML targeting SEO trough Web Vitals.
                         </li>
                         <li>
-                            CSS3 - SCSS.
+                            Responsive CSS3 with SCSS.
                         </li>
-                        <li>Deploy at Vercel.</li>
+                        <li>
+                            Deploy at Vercel.
+                        </li>
                         <li>
                             Git + Github.
                         </li>
