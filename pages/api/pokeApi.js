@@ -13,8 +13,8 @@ export const PokeApi = {
       }
     })
   },
-  getPokemonById: (id) => {
-    return axios.get(`/pokemon/${id}`)
+  getPokemonById: (name) => {
+    return axios.get(`/${name}`)
   }
 }
 

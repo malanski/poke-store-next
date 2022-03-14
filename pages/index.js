@@ -2,10 +2,10 @@ import Layout from '../components/layout'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Image from 'next/image'
-import Pikachu from '../public/pikachu-01.png'
 import { IconButton, Button } from '@chakra-ui/react'
 import { ArrowLeftIcon, ArrowRightIcon} from '@chakra-ui/icons'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { PokeApi } from './api/pokeApi'
 import { useEffect, useState } from 'react'
@@ -14,11 +14,12 @@ const Pokemon = (props) => {
   const name = props.name;
   const id = props.url.replace('https://pokeapi.co/api/v2/pokemon/', '').replace('/','')
   const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
+  
   return (
-    <Link href='/pokemon/' as={name}>
+    <Link href={`/pokemon/${name}`} as={name} id={name}>
       <a className={styles.card}>                                     
         <h2>{name}</h2>
-        <img src={imageUrl} alt={name}/>
+        <img src={imageUrl} alt={name} />
         <p className={styles.price}>150.00R$</p>
         <p className={styles.priceDisc}>120.00R$</p>
         
@@ -101,3 +102,18 @@ export default function Home(props) {
     </Layout>
   )
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
+  const { results }  = await res.json();
+  const pokemon = results.map((pokeman, id) => {
+      const paddedId = ('00' + (id + 1)).slice(-3);
+      const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
+      return { ...pokeman, image };
+  });
+  return {
+      props: { pokemon },
+  };
+
+}
+
