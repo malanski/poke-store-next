@@ -5,27 +5,50 @@
     color: white;
     min-height: 100vh;
 
-    h1{
+    .poketitle{
+      text-transform: capitalize;
+      letter-spacing: 5px;
       text-align: center;
       font-size: 30px;
       font-family: 'Pokemon Solid', sans-serif;
     }
     .pokeImg{
-        width: 250px;
+        width: 50%;
+        margin-left: 25%;
     }
     .ablilities{
       width: 100%;
       padding: 10px;
       border-radius: 15px;
       border: 2px solid white;
-      h2{
+      .specstitle{
+        font-size: 32px;
+        font-family: 'Pokemon Solid', sans-serif;
         text-align: center;
         margin-top: 20px;
         text-transform: uppercase;
       }
-      ul{
-        padding: 10px;
-        list-style: decimal;
+      .pokemoves{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 32px;
+        font-family: 'Pokemon Solid', sans-serif;
+        text-align: center;
+        margin-top: 20px;
+        text-transform: uppercase;
+        padding: 5px;
+        .movelist{
+          text-align: center;
+          width: 15vw;
+          padding: 10px;
+          font-size: 17px;
+          border: 2px solid black;
+          margin: 5px;
+          list-style: decimal;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
       }
   
     }

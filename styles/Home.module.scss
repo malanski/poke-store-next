@@ -9,15 +9,23 @@
   display: flex;
   justify-content: space-between;
 }
+
 .grid {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
+  list-style: none;
 }
-
+.pokelist{
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .card {
   margin: 10px;
   padding: 5px;
@@ -27,18 +35,19 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 22%;
+  width: 15vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2{
+  .pokename{
     font-family: 'Pokemon Solid', sans-serif;
+    text-transform: capitalize;
     font-size: 25px;
     color: white;
   }
   .pokeImg{
-    border: 2px solid black;
     margin-left: 5%;
+    width: 90%;
   }
   
   .price{
@@ -50,7 +59,7 @@
     color: greenyellow;
     font-size: 23px;
   }
-  .buyBtn{
+  .buybtn{
     width: 90%;
   }
   .buyBtn:hover{
