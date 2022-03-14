@@ -1,4 +1,4 @@
-# Poke-Store-Next
+# Next.js Project: Poke-Store-Next
 Activity 7 from Awari Web Development Course  
   
 <div align="right">
