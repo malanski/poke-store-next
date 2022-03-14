@@ -3,7 +3,7 @@ Activity 7 from Awari Web Development Course
   
 <div align="right">
   
-### Deploy at Vercel: <a href="https://poke-store-next-git-vercel-malanski.vercel.app/">Poke-Store-Next</a>  
+### Deploy at Vercel: <a href="https://poke-store-next.vercel.app/">Poke-Store-Next</a>  
   
 </div>  
   
