@@ -11,7 +11,7 @@ const Pokemon = ({ pokemon }) => {
         <Layout title={pokemon.name}>
 
             <Head>
-                <title>The {pokemon.name} Page's</title>
+                <title>The {pokemon.name} Page</title>
             </Head>
             <div className={styles.pokemon}>
 
