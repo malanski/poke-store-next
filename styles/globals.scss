@@ -19,28 +19,11 @@ a {
   box-sizing: border-box;
 }
 
-.site-center{
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(41, 41, 41);
-
-}
 main{
   width: 70vw;
 }
-.mainsite {
-  min-height: 100vh;
-  padding-top: 10px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 @media screen and (max-width:'428px') {
-  .site-center{
-    flex-direction: column;
-  }
   main{
     width: 100vw;
   }
