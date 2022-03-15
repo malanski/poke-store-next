@@ -3,6 +3,7 @@
     margin: 10px 10px 10px 0;
     padding: 10px;
     border: 2px solid white;
+    color: white;
     border-radius: 15px;
     text-align: center;
     transition: all ease-out 0.8s;
@@ -15,8 +16,16 @@
 }
 .news{
     width: 100%;
-    input{
+    .newsinput{
+        border-radius: 5px;
+        padding: 5px;
+        color: black;
         width: 80%;
+    }
+    .newsbtn{
+        color: black;
+        text-align: center;
+        padding: 5px;
     }
 }
 .asider:hover{
