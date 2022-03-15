@@ -1,9 +1,12 @@
 
 import styles from '../styles/Aside.module.scss'
 import Image from 'next/image'
+import vercel from '../public/vercel.svg'
+
 import CardgameLogo from '../public/logo-cardgame.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons'
+import { Button } from '@chakra-ui/react'
 
 
 export default function Aside () {
@@ -23,12 +26,20 @@ export default function Aside () {
             </div>
 
             <section className={styles.news}>
-                <h4>Subscribe</h4>
-                <input type='text' placeholder='Your e-mail'></input>
-                <button title='Subscribe'>
+                <h4>Subscribe your Email</h4>
+                <input className={styles.newsinput} type='text' placeholder='Your e-mail'></input>
+                <Button className={styles.newsbtn} title='Subscribe'>
                     <FontAwesomeIcon icon={faMailBulk} />
-                </button>
+                </Button>
             </section>
+
+            <p>Powered by</p>
+            <Image className='vercel'
+                src={vercel}
+                alt="vercel"
+                width='50px'
+                height='30px'
+                />
         </aside>
     )
 }

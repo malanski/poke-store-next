@@ -14,6 +14,9 @@ export default function Footer () {
                 placeholder="blur" // Optional blur-up while loading
             />
 
+          
+
+
 
             
             <ul className="social">
@@ -41,6 +44,8 @@ export default function Footer () {
                 </li>
                 
             </ul>
+
+
 
         </footer>
     )

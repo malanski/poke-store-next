@@ -31,8 +31,8 @@ export default function Header () {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/pokemon">
-                        <a title='About this project'>Pokémon</a>
+                    <Link href="/category">
+                        <a title='About this project'>Category</a>
                     </Link>
                 </li>
             </ul>
