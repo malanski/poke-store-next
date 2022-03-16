@@ -23,15 +23,17 @@ export default function Header () {
 
             <ul className='nav-list'>
                 <li className={router.pathname == "/" ? "active" : ""}>
-                <Link href="/ ">
+                    <Link href="/ ">
                         <a title='Home'>Home</a>
                     </Link>
                 </li>
+
                 <li className={router.pathname == "/about" ? "active" : ""}>
                     <Link href="/about">
                         <a title='About this project'>About Us</a>
                     </Link>
                 </li>
+                
                 <li className={router.pathname == "/category" ? "active" : ""}>
                     <Link href="/category">
                         <a title='About this project'>Category</a>

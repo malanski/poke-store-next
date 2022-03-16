@@ -45,13 +45,21 @@ export default function Home({ pokemon }) {
                   <Link href={`/pokemon/${index + 1}`}>
                       <a className={styles.card}>
 
-                        <h2 className={styles.pokename}>{item.name}</h2>
+                        <div className={styles.namecard}>
+                          <img
+                              src={item.imageHome}
+                              alt={item.name}
+                              className={styles.pokeIcon}
+                          />
+                          <h2 className={styles.pokename}>{item.name}</h2>
+                        </div>
 
                         <img
                             src={item.image}
                             alt={item.name}
                             className={styles.pokeImg}
                         />
+                       
 
                         <p className={styles.price}>150.00$</p>
                         <p className={styles.priceDisc}>119.99$</p>
@@ -71,23 +79,36 @@ export default function Home({ pokemon }) {
 
         <div className={styles.pagination}>
           <IconButton aria-label='Preview' icon={<ArrowLeftIcon />} />
-          <IconButton aria-label='Preview' icon={<ArrowRightIcon />} />
+          <IconButton onClick={ () => changePage(page + 1)} aria-label='Preview' icon={<ArrowRightIcon />} />
         </div>
 
-
-        
     </Layout>
   )
 }
+let page = 0
+
+async function changePage(newPage) {
+  page = newPage
+  const pagination = await pokemon(page)
+  Home(pagination.results)
+}
 
 export const getStaticProps = async () => {
-  
-    const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
+  const limit = 20
+
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit * page}`);
+    // const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
     const { results }  = await res.json();
+
     const pokemon = results.map((pokeMons, index) => {
+
         const paddedId = ('00' + (index + 1)).slice(-3);
+
         const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
-        return { ...pokeMons, image };
+        const imageHome = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${(index + 1)}.png`;
+        const season2 = ('00' + (index + 151)).slice(-3)
+
+        return { ...pokeMons, image, imageHome, limit, page };
     });
     return {
         props: { pokemon },
