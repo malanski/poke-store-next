@@ -42,6 +42,7 @@ export default function About() {
 
                     <ul>
                         <li>Chakra Ui + FontAwesome icons</li>
+                        <li>Next.Js Carousel</li>
                         <li>
                             JavaScript to TypeScript
                         </li>

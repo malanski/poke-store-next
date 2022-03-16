@@ -1,0 +1,17 @@
+{
+    "pictures": [
+      {
+        "url": "public/ash-poke-pc1.png",
+        "alt": "Alt 1",
+        "caption": "Caption 1",
+        "copyright":"Copyright 1"
+      },
+      {
+        "url": "public/ash-poke-pc2.png",
+        "alt": "Alt 2",
+        "caption": "Caption 2",
+        "copyright":"Copyright 2"
+      }
+    ]
+  }
+  

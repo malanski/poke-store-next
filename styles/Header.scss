@@ -41,22 +41,112 @@ header{
         text-transform: uppercase;
         display: flex;
         justify-content: space-evenly;
+        li{
+            &:hover a {
+                border-bottom: 35px solid;
+            }
+            &:nth-child(1) {
+                a {border-bottom-color: red;}
+            }
+            &:nth-child(2) {
+                a {border-bottom-color: green;}
+            }
+            &:nth-child(3) {
+                a {border-bottom-color: blue;}
+            }
+            
+            
+        }
+        li.active a {
+            border-bottom-width: 35px;
+        }
+        
     }    
 }
 
+@media (max-width: 810px) {
+    header {
+        width: 100%;
+        height: 14vh;
+        flex-direction: column;
+        .logo-loja{
+            .store-name{
+                font-size: 37px;
+            }
+        }
+        .social{
+            width: 100%;
+        }
+    }
+}
 @media (max-width: 600px) {
     header {
         width: 100%;
+        flex-direction: column;
+        .logo-loja{
+            .store-name{
+                font-size: 37px;
+            }
+        }
+        .social{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 428px) {
+    header {
+        width: 100%;
+        height: 20vh;
+        flex-direction: column;
+        .social{
+            width: 100%;
+        }
+    }
+} 
+@media (max-width: 414px) {
+    header {
+        width: 100%;
+        height: 20vh;
+        flex-direction: column;
+        .social{
+            width: 100%;
+        }
+    }
+} 
+@media (max-width: 412px) {
+    header {
+        width: 100%;
+        height: 20vh;
         flex-direction: column;
         .social{
             width: 100%;
         }
     }
 }
- 
+@media (max-width: 390px) {
+    header {
+        width: 100%;
+        height: 22vh;
+        flex-direction: column;
+        .social{
+            width: 100%;
+        }
+    }
+} 
 @media (max-width: 375px) {
     header {
         width: 100%;
+        height: 26vh;
+        flex-direction: column;
+        .social{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 360px) {
+    header {
+        width: 100%;
+        height: 23vh;
         flex-direction: column;
         .social{
             width: 100%;

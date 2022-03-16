@@ -79,8 +79,40 @@
 @media (max-width: 428px) {
   .grid {
     flex-direction: column;
+    width: 100%;
     .card{
-      width: 100%;
+      width: 100vw;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .grid {
+    flex-direction: column;
+    width: 100%;
+    .card{
+      width: 100vw;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .grid {
+    flex-direction: column;
+    width: 100%;
+    .card{
+      width: 100vw;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+@media (max-width: 340px) {
+  .grid {
+    flex-direction: column;
+    width: 100%;
+    .card{
+      width: 100vw;
       margin: 0 0 10px 0;
     }
   }
