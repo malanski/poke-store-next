@@ -39,11 +39,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .pokename{
-    font-family: 'Pokemon Solid', sans-serif;
-    text-transform: capitalize;
-    font-size: 25px;
-    color: white;
+  .namecard{
+    display: flex;
+    justify-content: space-between;
+    .pokeIcon{
+      margin-left: -10px;
+      background-color: rgb(255, 154, 255);
+      width: 50px;
+      border-radius: 50%;
+      border: 4px solid rgb(130, 145, 0);
+    }
+    .pokename{
+      font-family: 'Pokemon Solid', sans-serif;
+      text-transform: capitalize;
+      font-size: 23px;
+      color: white;
+    }
   }
   .pokeImg{
     margin-left: 5%;

@@ -12,21 +12,44 @@
       font-size: 30px;
       font-family: 'Pokemon Solid', sans-serif;
     }
-    .pokeImg{
+    .pokeImages{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .pokeImg{
         width: 50%;
-        margin-left: 25%;
+        height: 100%;
+        margin-left: 0;
+    }
     }
     .ablilities{
       width: 100%;
       padding: 10px;
       border-radius: 15px;
       border: 2px solid white;
-      .specstitle{
-        font-size: 32px;
-        font-family: 'Pokemon Solid', sans-serif;
-        text-align: center;
-        margin-top: 20px;
-        text-transform: uppercase;
+      .rowpoke{
+        display: flex;
+        justify-content: space-around;
+        .animated{
+          display: flex;
+          .pokeGif{
+            margin-right: 20px;
+            width: 100px;
+          }
+          
+        }
+        .specstitle{
+          font-size: 32px;
+          font-family: 'Pokemon Solid', sans-serif;
+          text-align: center;
+          margin-top: 20px;
+          text-transform: uppercase;
+        }
+      }
+      .learn{
+        font-weight: bold;
+        margin-top: 30px;
       }
       .pokemoves{
         width: 100%;
@@ -39,10 +62,11 @@
         margin-top: 20px;
         text-transform: uppercase;
         padding: 5px;
+        justify-content: space-between;
         .movelist{
           text-align: center;
-          width: 15vw;
-          padding: 10px;
+          width: 18vw;
+          padding: 5px;
           font-size: 17px;
           border: 2px solid black;
           margin: 5px;
@@ -52,5 +76,149 @@
       }
   
     }
+    .specstitle{
+      font-size: 32px;
+      font-family: 'Pokemon Solid', sans-serif;
+      text-align: center;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
     
+}
+.pokeNome{
+  text-transform: capitalize;
+}
+@media (max-width:428px) {
+  .pokemon{
+    .ablilities{
+      width: 100%;
+      .rowpoke{
+        .animated{
+          .pokeGif{
+            width: 70px;
+          }
+        }
+        .specstitle{
+          font-size: 20px;
+        }
+      }
+      .pokemoves{
+        width: 100%;
+        font-size: 20px;
+        .movelist{
+          width: 35vw;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }        
+    }
   }
+}
+@media (max-width:412px) {
+  .pokemon{
+    .ablilities{
+      width: 100%;
+      .rowpoke{
+        .animated{
+          .pokeGif{
+            width: 70px;
+          }
+        }
+        .specstitle{
+          font-size: 20px;
+        }
+      }
+      .pokemoves{
+        width: 100%;
+        font-size: 20px;
+        .movelist{
+          width: 35vw;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }        
+    }
+  }
+}
+
+@media (max-width:375px) {
+  .pokemon{
+    .ablilities{
+      width: 100%;
+      .rowpoke{
+        .animated{
+          .pokeGif{
+            width: 70px;
+          }
+        }
+        .specstitle{
+          font-size: 20px;
+        }
+      }
+      .pokemoves{
+        width: 100%;
+        font-size: 20px;
+        .movelist{
+          width: 35vw;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }        
+    }
+  }
+}
+
+@media (max-width:360px) {
+  .pokemon{
+    .ablilities{
+      width: 100%;
+      .rowpoke{
+        .animated{
+          .pokeGif{
+            width: 50px;
+          }
+        }
+        .specstitle{
+          font-size: 20px;
+        }
+      }
+      .pokemoves{
+        width: 100%;
+        font-size: 20px;
+        .movelist{
+          width: 35vw;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }        
+    }
+  }
+}
+
+
+@media (max-width:340px) {
+  .pokemon{
+    .ablilities{
+      width: 100%;
+      .rowpoke{
+        .animated{
+          .pokeGif{
+            width: 70px;
+          }
+        }
+        .specstitle{
+          font-size: 20px;
+        }
+      }
+      .pokemoves{
+        width: 100%;
+        font-size: 20px;
+        .movelist{
+          width: 35vw;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }        
+    }
+  }
+}
