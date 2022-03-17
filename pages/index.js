@@ -96,23 +96,23 @@ async function changePage(newPage) {
 export const getStaticProps = async () => {
   const limit = 20
 
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit * page}`);
-    // const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
-    const { results }  = await res.json();
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit * page}`);
+  // const res = await fetch('https://pokeapi.co/api/v2/pokemon?=limit150');
+  const { results }  = await res.json();
 
-    const pokemon = results.map((pokeMons, index) => {
+  const pokemon = results.map((pokeMons, index) => {
 
-        const paddedId = ('00' + (index + 1)).slice(-3);
+      const paddedId = ('00' + (index + 1)).slice(-3);
 
-        const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
-        const imageHome = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${(index + 1)}.png`;
-        const season2 = ('00' + (index + 151)).slice(-3)
+      const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
+      const imageHome = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${(index + 1)}.png`;
+      const season2 = ('00' + (index + 151)).slice(-3)
 
-        return { ...pokeMons, image, imageHome, limit, page };
-    });
-    return {
-        props: { pokemon },
-    };
+      return { ...pokeMons, image, imageHome, limit, page };
+  });
+  return {
+      props: { pokemon },
+  };
 
 }
 
