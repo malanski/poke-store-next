@@ -1,6 +1,7 @@
 # Next.js Project: Poke-Store-Next
-Activity 7 from Awari Web Development Course  
+Activity 8 from Awari Web Development Course  
   
+## Specification 3 
 <div align="right">
   
 ### Deploy at Vercel: <a href="https://poke-store-next.vercel.app/">Poke-Store-Next</a>  
