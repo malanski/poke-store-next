@@ -4,30 +4,66 @@ import styles from '../styles/Home.module.scss'
 import Head from 'next/head'
 import { Button, ButtonGroup, IconButton } from '@chakra-ui/react'
 import { ArrowLeftIcon, ArrowRightIcon, BellIcon, CheckCircleIcon, EmailIcon } from '@chakra-ui/icons'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Pokemon from './pokemon/[id]'
 import {PokeApi} from './api/pokeApi'
+import { useRouter } from 'next/router'
 
-export default function Home({ pokemon }) {
-  const limit = 20
-  const [state, setState] = useState({
+
+export default function Home({  }) {
+  const { query } = useRouter();
+  const { page, limit } = query;
+  
+
+  // const limit = 20
+  const [pokemons, setPokemons] = useState({
     loading: true, 
     pokemons: [],
     total: 0,
     currentPage: 0,
     totalPages: 0,
   })
+
+  // const [page, setPage] = useState(page);
+ 
+
   useEffect(() => {
-    PokeApi.listPokemons(state.currentPage * limit, limit).then(({data}) => {
-      setState((prev) => ({
-        ...prev,
-        loading: false, 
-        total: data.count,
-        totalPages: Math.ceil(data.count / limit),
-        pokemons: [...prev.pokemons, ...data.results.map((pokemon, key) => <Pokemon key={key + (prev.pokemons.length+1)} name={pokemon.name} url={pokemon.url} />)]
-      }))
-    })
-  }, [state.currentPage])
+    async function get() {
+      const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${(page - 1)*limit}`);
+      const { results }  = await res.json();
+
+      const pokemon = res.map((pokeMons, index) => {
+
+        const paddedId = ('00' + (index + 1)).slice(-3);
+    
+        const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
+        const imageHome = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${(index + 1)}.png`;
+        const season2 = ('00' + (index + 151)).slice(-3)
+    
+        return { ...pokeMons, image, imageHome };
+    });
+      setPokemons(results)
+    }
+ 
+    get()
+  }, [page, limit, setPokemons])
+   
+  // const onClick = useCallback(() => {
+  //   setPage()
+  // }, [setPage])
+
+
+
+  //   PokeApi.listPokemons(state.currentPage * limit, limit).then(({data}) => {
+  //     setState((prev) => ({
+  //       ...prev,
+  //       loading: false, 
+  //       total: data.count,
+  //       totalPages: Math.ceil(data.count / limit),
+  //       pokemons: [...prev.pokemons, ...data.results.map((pokemon, key) => <Pokemon key={key + (prev.pokemons.length+1)} name={pokemon.name} url={pokemon.url} />)]
+  //     }))
+  //   })
+  // }, [state.currentPage])
   return (
     <Layout title="NextJS PokeDex">
 
@@ -79,40 +115,11 @@ export default function Home({ pokemon }) {
 
         <div className={styles.pagination}>
           <IconButton aria-label='Preview' icon={<ArrowLeftIcon />} />
-          <IconButton onClick={ () => changePage(page + 1)} aria-label='Preview' icon={<ArrowRightIcon />} />
+          <IconButton onClick={onClick} aria-label='Preview' icon={<ArrowRightIcon />} />
         </div>
 
     </Layout>
   )
 }
-let page = 0
 
-async function changePage(newPage) {
-  page = newPage
-  const pagination = await pokemon(page)
-  Home(pagination.results)
-}
-
-export const getStaticProps = async () => {
-  const limit = 20
-
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit * page}`);
-    // const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
-    const { results }  = await res.json();
-
-    const pokemon = results.map((pokeMons, index) => {
-
-        const paddedId = ('00' + (index + 1)).slice(-3);
-
-        const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
-        const imageHome = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${(index + 1)}.png`;
-        const season2 = ('00' + (index + 151)).slice(-3)
-
-        return { ...pokeMons, image, imageHome, limit, page };
-    });
-    return {
-        props: { pokemon },
-    };
-
-}
 
