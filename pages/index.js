@@ -1,19 +1,25 @@
 import Layout from '../components/layout'
-import Link from 'next/link'
 import styles from '../styles/Home.module.scss'
 import Head from 'next/head'
-import { Button, ButtonGroup, IconButton } from '@chakra-ui/react'
-import { ArrowLeftIcon, ArrowRightIcon, BellIcon, CheckCircleIcon, EmailIcon } from '@chakra-ui/icons'
+import { IconButton } from '@chakra-ui/react'
+import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 import { useEffect, useState } from 'react'
-import Pokemon from './pokemon/[id]'
 import useFetchPokemon from './api/pokeApi'
-import PokemonCard from '../components/PokemonCard'
+
+import Pokestore from './pokestore'
+
 
 export default function Home() {
-  const { result, error } = useFetchPokemon()
+  
+  // const { result, error } = useFetchPokemon()
 
-  if (error) return <h1>Something went wrong!</h1>
-  if (!result) return <div className={styles.loading}><h1>Loading...</h1></div>
+  const [pageIndex, setPageIndex] = useState(0);
+  
+
+
+  // if (error) return <h1>Something went wrong!</h1>
+
+  // if (!result) return <div className={styles.loading}><h1>Loading...</h1></div>
  
   // const limit = 20
   // const [state, setState] = useState({
@@ -24,7 +30,7 @@ export default function Home() {
   //   totalPages: 0,
   // })
   // useEffect(() => {
-  //   PokeApi.listPokemons(state.currentPage * limit, limit).then(({data}) => {
+  //   pokeApi.listPokemons(state.currentPage * limit, limit).then(({data}) => {
   //     setState((prev) => ({
   //       ...prev,
   //       loading: false, 
@@ -35,6 +41,18 @@ export default function Home() {
   //   })
   // }, [state.currentPage])
 
+
+  // const nextPage = () => {
+  //   let page = state.currentPage;
+
+  //   if ((page + 1) >= state.totalPage) return;
+  //   page += 1;
+  //   setState((prev) => ({
+  //     ...prev,
+  //     currentPage: page,
+  //   }))
+  // };
+
   return (
     <Layout title="NextJS PokeDex">
 
@@ -42,15 +60,26 @@ export default function Home() {
         <title>Poke-Store Next.js Project</title>
       </Head>
 
-      <div className={styles.grid}>
-        {result.results.map((pokemon) => (
-          <PokemonCard pokemon={pokemon} key={pokemon.name} />
-        ))}
-      </div>
+
+
+      <Pokestore index={pageIndex}/>
+
+
 
         <div className={styles.pagination}>
-          <IconButton aria-label='Preview' icon={<ArrowLeftIcon />} />
-          <IconButton aria-label='Preview' icon={<ArrowRightIcon />} />
+
+          <IconButton
+            onClick={() => setPageIndex(pageIndex - 1)}
+            aria-label='Preview'
+            icon={<ArrowLeftIcon />} 
+          />
+
+          <IconButton 
+            onClick={() => setPageIndex(pageIndex + 1)}
+            aria-label='Preview' 
+            icon={<ArrowRightIcon />} 
+          />
+          
         </div>
 
     </Layout>

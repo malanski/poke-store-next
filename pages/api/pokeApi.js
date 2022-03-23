@@ -1,15 +1,39 @@
 import useSWR from 'swr'
+
+
  
+
 const fetcher = (url) => fetch(url).then((res) => res.json())
  
 const API_URL = 'https://pokeapi.co/api/v2/pokemon'
-const PAGE_LIMIT = 16 
-export default function useFetchPokemon(name) {
-  const uri = name ? `${API_URL}/${name}` : `${API_URL}?limit=${PAGE_LIMIT}`
+
+const PAGE_LIMIT = 8
+export default function useFetchPokemon(id) {
+
+
+  const uri = (id) ? `${API_URL}/${id}` : `${API_URL}?limit=${PAGE_LIMIT}`
+
   const { data: result, error } = useSWR(uri, fetcher)
+  
   return { result, error }
  
 }
+
+// export const getServerSideProps = async (context) => {
+//   const { id } = context.query;
+//   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+//   const poke = await res.json();
+//   const paddedId = (poke.id);
+//   poke.imageArt = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${poke.id}.png`;
+//   poke.imageHome = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${poke.id}.png`;
+//   poke.imageAnima = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${poke.id}.gif`;
+//   poke.imageAnimaBack = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/${poke.id}.gif`;
+
+
+//   return {  
+//       props: { poke },
+//   };
+// }
 
 
 
@@ -32,6 +56,8 @@ export default function useFetchPokemon(name) {
 //     return axios.get(`/pokemon/${id}`)
 //   }
 // }
+
+
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
