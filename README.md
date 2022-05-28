@@ -1,7 +1,6 @@
 # Next.js Project: Poke-Store-Next
-Activity 8 from Awari Web Development Course  
-  
-## Specification 3 
+
+
 <div align="right">
   
 ### Deploy at Vercel: <a href="https://poke-store-next.vercel.app/">Poke-Store-Next</a>  
@@ -21,18 +20,11 @@ Activity 8 from Awari Web Development Course
 - HTML5
 - Git
 - Github  
-  
-## Objectieves
-Build a Next.js Application.  
-  
-## Specification
+    
+## Objectives
 - Create a Next.js App.`cretate-next-app` 
 - Create Routes. Next uses `pages/` folder to route it is a file-system based router built on the concept of pages.
 - Reproduce parts of your HTML on Next.js.
 - Create and use at least one component.
 - Include some component with `state`
 - The code need to be on Github.  
-  
-## Power up:  
-- Convert it to TypeScript in a branch diferent from main/master.  
-  
