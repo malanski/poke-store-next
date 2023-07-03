@@ -54,14 +54,12 @@ This project is created solely for educational purposes, and it does not serve a
 ## Resources
 
 1. ReactJS: https://reactjs.org/
-2. NextJS: https://nextjs
-
-.org/
-3. SASS: https://sass-lang.com/
-4. SWR: https://swr.vercel.app/
-5. Chakra UI: https://chakra-ui.com/
-6. FontAwesome: https://fontawesome.com/
-7. Node.js: https://nodejs.org/
+2. NextJS: https://nextjs.org/ 
+3. SASS: https://sass-lang.com/ 
+4. SWR: https://swr.vercel.app/  
+5. Chakra UI: https://chakra-ui.com/  
+6. FontAwesome: https://fontawesome.com/  
+7. Node.js: https://nodejs.org/  
 
 ## License
 
